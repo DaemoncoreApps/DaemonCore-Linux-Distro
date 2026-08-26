@@ -1,5 +1,7 @@
 # DaemonCore Linux
 
+![DaemonCore Linux banner](assets/daemoncore-banner.png)
+
 DaemonCore Linux is a Debian-based XFCE live system for **authorized security
 testing, defensive validation, incident response, and security education**.
 The image is assembled from source with Debian's `live-build` tooling.
