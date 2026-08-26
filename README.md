@@ -21,6 +21,9 @@ The image is assembled from source with Debian's `live-build` tooling.
 See [APPLICATIONS.md](APPLICATIONS.md) for the complete categorized manifest
 of explicitly included software.
 
+DaemonCore also ships with three original wallpapers and two selectable dark
+GTK themes. See [THEMING.md](THEMING.md) for previews and customization details.
+
 ## Build requirements
 
 Build on Debian Stable, or in a Debian Stable virtual machine/container. The

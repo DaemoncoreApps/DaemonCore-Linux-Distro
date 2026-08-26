@@ -8,7 +8,12 @@ $RequiredPaths = @(
     'config/package-lists/daemoncore.list.chroot',
     'config/hooks/live/0100-daemoncore-identity.hook.chroot',
     'config/hooks/live/0200-daemoncore-hardening.hook.chroot',
-    'config/includes.chroot/etc/os-release'
+    'config/includes.chroot/etc/os-release',
+    'config/includes.chroot/usr/share/backgrounds/daemoncore/core-horizon.png',
+    'config/includes.chroot/usr/share/backgrounds/daemoncore/silent-grid.png',
+    'config/includes.chroot/usr/share/backgrounds/daemoncore/neon-citadel.png',
+    'config/includes.chroot/usr/share/themes/DaemonCore-Dark/gtk-3.0/gtk.css',
+    'config/includes.chroot/usr/share/themes/DaemonCore-Black/gtk-3.0/gtk.css'
 )
 
 foreach ($RelativePath in $RequiredPaths) {

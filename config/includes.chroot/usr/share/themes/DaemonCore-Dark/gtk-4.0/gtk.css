@@ -1,0 +1,15 @@
+@import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk-contained-dark.css");
+
+@define-color accent_bg_color #7655d9;
+@define-color accent_color #aa91ff;
+@define-color window_bg_color #151720;
+@define-color window_fg_color #ececf4;
+@define-color headerbar_bg_color #1d202b;
+@define-color headerbar_fg_color #f4f2ff;
+@define-color view_bg_color #101119;
+@define-color view_fg_color #ececf4;
+
+window, dialog { background-color: @window_bg_color; color: @window_fg_color; }
+headerbar { background: @headerbar_bg_color; color: @headerbar_fg_color; }
+progressbar progress, scale highlight { background-color: #44d7c5; }
+
