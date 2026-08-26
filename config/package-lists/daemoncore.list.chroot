@@ -16,6 +16,14 @@ termshark
 ngrep
 netcat-openbsd
 socat
+bettercap
+bettercap-caplets
+
+# Wireless assessment
+aircrack-ng
+hcxdumptool
+hcxtools
+reaver
 
 # Service and protocol assessment
 enum4linux
@@ -30,6 +38,8 @@ nikto
 sqlmap
 dirb
 wfuzz
+ffuf
+gobuster
 
 # Credential auditing
 hydra

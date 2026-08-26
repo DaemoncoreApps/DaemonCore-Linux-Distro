@@ -16,6 +16,9 @@ The image is assembled from source with Debian's `live-build` tooling.
 - Firewall enabled by default
 - No embedded credentials, payloads, exploits, or untrusted binary downloads
 
+See [APPLICATIONS.md](APPLICATIONS.md) for the complete categorized manifest
+of explicitly included software.
+
 ## Build requirements
 
 Build on Debian Stable, or in a Debian Stable virtual machine/container. The
