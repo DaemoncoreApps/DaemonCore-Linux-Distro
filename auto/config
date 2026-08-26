@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+lb config noauto \
+    --mode debian \
+    --distribution stable \
+    --architectures amd64 \
+    --archive-areas "main contrib non-free-firmware" \
+    --binary-images iso-hybrid \
+    --bootappend-live "boot=live components username=daemon hostname=daemoncore locales=en_US.UTF-8 keyboard-layouts=us persistence" \
+    --image-name daemoncore \
+    --iso-application "DaemonCore Linux" \
+    --iso-publisher "DaemonCore Project" \
+    --iso-volume "DAEMONCORE" \
+    --memtest none \
+    --security true \
+    "${@}"

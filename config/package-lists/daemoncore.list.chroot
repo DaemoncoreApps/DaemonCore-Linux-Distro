@@ -1,0 +1,62 @@
+# Discovery and network inspection
+nmap
+masscan
+arp-scan
+netdiscover
+traceroute
+whois
+dnsutils
+iproute2
+ethtool
+iperf3
+tcpdump
+wireshark
+tshark
+termshark
+ngrep
+netcat-openbsd
+socat
+
+# Service and protocol assessment
+enum4linux
+smbclient
+ldap-utils
+snmp
+onesixtyone
+sslscan
+
+# Web assessment
+nikto
+sqlmap
+dirb
+wfuzz
+
+# Credential auditing
+hydra
+john
+hashcat
+hashid
+crunch
+
+# Forensics and reverse engineering
+binwalk
+foremost
+sleuthkit
+libimage-exiftool-perl
+yara
+gdb
+strace
+ltrace
+hexedit
+binutils
+xxd
+
+# Scripting and build essentials
+python3
+python3-pip
+python3-venv
+pipx
+ruby
+perl
+build-essential
+shellcheck

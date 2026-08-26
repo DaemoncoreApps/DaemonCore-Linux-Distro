@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+
+printf '%s\n' daemoncore > /etc/hostname
+
+if [ -f /etc/hosts ]; then
+    sed -i 's/127\.0\.1\.1.*/127.0.1.1\tdaemoncore/' /etc/hosts
+fi
+
+install -d -m 0755 /usr/local/share/daemoncore
+printf '%s\n' 'DaemonCore Linux 0.1 (Genesis)' > /usr/local/share/daemoncore/release
+
+if [ -d /etc/skel/Desktop ]; then
+    chmod 0755 /etc/skel/Desktop/*.desktop
+fi

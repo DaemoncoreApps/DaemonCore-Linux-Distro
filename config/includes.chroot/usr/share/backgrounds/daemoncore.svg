@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="72%">
+      <stop offset="0" stop-color="#282346"/>
+      <stop offset="0.48" stop-color="#131522"/>
+      <stop offset="1" stop-color="#090a0f"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#a77bff"/>
+      <stop offset="1" stop-color="#5ee9d0"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <g opacity=".13" stroke="#9d7cff" fill="none">
+    <path d="M0 800 L500 300 L850 650 L1280 220 L1920 860"/>
+    <path d="M0 880 L500 380 L850 730 L1280 300 L1920 940"/>
+    <circle cx="960" cy="500" r="360"/>
+    <circle cx="960" cy="500" r="440"/>
+  </g>
+  <g transform="translate(960 460)" filter="url(#glow)">
+    <path d="M0-155 L128-78 L128 78 L0 155 L-128 78 L-128-78 Z" fill="none" stroke="url(#core)" stroke-width="12"/>
+    <path d="M0-92 L74-46 L74 46 L0 92 L-74 46 L-74-46 Z" fill="url(#core)" opacity=".92"/>
+    <circle r="24" fill="#11131a"/>
+  </g>
+  <text x="960" y="720" text-anchor="middle" fill="#f0eff8" font-family="sans-serif" font-size="72" font-weight="700" letter-spacing="12">DAEMONCORE</text>
+  <text x="960" y="770" text-anchor="middle" fill="#8d91a6" font-family="sans-serif" font-size="24" letter-spacing="8">LINUX • GENESIS</text>
+</svg>

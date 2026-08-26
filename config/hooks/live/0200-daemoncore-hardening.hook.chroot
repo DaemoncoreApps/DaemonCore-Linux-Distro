@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+# Enable the local firewall without assuming an active network interface.
+systemctl enable firewalld.service
+
+# Packet capture is available to members of the wireshark group without
+# requiring the entire desktop session to run as root.
+if getent group wireshark >/dev/null 2>&1; then
+    usermod -a -G wireshark daemon 2>/dev/null || true
+fi
+
+# Disable services that are unnecessary on a security workstation image.
+for service in ssh.service apache2.service; do
+    systemctl disable "$service" 2>/dev/null || true
+done
+

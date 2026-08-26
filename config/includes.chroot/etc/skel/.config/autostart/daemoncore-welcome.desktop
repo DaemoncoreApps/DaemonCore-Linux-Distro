@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Welcome to DaemonCore
+Comment=Open the DaemonCore quick-start guide
+Exec=exo-open /usr/share/doc/daemoncore/QUICKSTART.html
+OnlyShowIn=XFCE;
+Terminal=false
+X-GNOME-Autostart-enabled=true
+
