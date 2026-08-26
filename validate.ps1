@@ -13,7 +13,9 @@ $RequiredPaths = @(
     'config/includes.chroot/usr/share/backgrounds/daemoncore/silent-grid.png',
     'config/includes.chroot/usr/share/backgrounds/daemoncore/neon-citadel.png',
     'config/includes.chroot/usr/share/themes/DaemonCore-Dark/gtk-3.0/gtk.css',
-    'config/includes.chroot/usr/share/themes/DaemonCore-Black/gtk-3.0/gtk.css'
+    'config/includes.chroot/usr/share/themes/DaemonCore-Black/gtk-3.0/gtk.css',
+    'config/includes.chroot/usr/share/applications/daemoncore-guides.desktop',
+    'config/includes.chroot/usr/share/doc/daemoncore/guidebook/index.html'
 )
 
 foreach ($RelativePath in $RequiredPaths) {
@@ -47,6 +49,22 @@ foreach ($ShellFile in $ShellFiles) {
     $Bytes = [System.IO.File]::ReadAllBytes($ShellFile.FullName)
     if ($Bytes -contains 13) {
         throw "Shell file contains CRLF line endings: $($ShellFile.FullName)"
+    }
+}
+
+$GuideRoot = Join-Path $ProjectRoot 'config/includes.chroot/usr/share/doc/daemoncore/guidebook'
+$GuideFiles = Get-ChildItem -LiteralPath $GuideRoot -Filter '*.html'
+foreach ($GuideFile in $GuideFiles) {
+    $GuideContent = Get-Content -Raw -LiteralPath $GuideFile.FullName
+    $LocalLinks = [regex]::Matches($GuideContent, 'href="([^"]+)"') |
+        ForEach-Object { $_.Groups[1].Value } |
+        Where-Object { $_ -notmatch '^(https?:|#)' }
+
+    foreach ($LocalLink in $LocalLinks) {
+        $LinkPath = Join-Path $GuideFile.DirectoryName $LocalLink
+        if (-not (Test-Path -LiteralPath $LinkPath -PathType Leaf)) {
+            throw "Broken guidebook link in $($GuideFile.Name): $LocalLink"
+        }
     }
 }
 

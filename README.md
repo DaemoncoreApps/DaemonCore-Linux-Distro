@@ -24,6 +24,10 @@ of explicitly included software.
 DaemonCore also ships with three original wallpapers and two selectable dark
 GTK themes. See [THEMING.md](THEMING.md) for previews and customization details.
 
+An offline Security Guidebook is available from the desktop and Applications
+menu. Its lab-focused guides live in
+`config/includes.chroot/usr/share/doc/daemoncore/guidebook/`.
+
 ## Build requirements
 
 Build on Debian Stable, or in a Debian Stable virtual machine/container. The

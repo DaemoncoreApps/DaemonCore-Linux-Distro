@@ -1,0 +1,50 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b0d13;
+  --panel: #151821;
+  --panel-2: #1d202b;
+  --text: #e9eaf1;
+  --muted: #a6a9b8;
+  --violet: #9d7cff;
+  --teal: #55dfcc;
+  --warning: #ff7894;
+  --border: #303444;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1b1830 0, var(--bg) 34rem);
+  color: var(--text);
+  font: 17px/1.65 system-ui, sans-serif;
+}
+header, main, footer { width: min(980px, calc(100% - 2rem)); margin-inline: auto; }
+header { padding: 3.5rem 0 2rem; }
+header p, footer { color: var(--muted); }
+main { padding-bottom: 4rem; }
+h1 { margin: 0; font-size: clamp(2.25rem, 6vw, 4rem); letter-spacing: -.04em; }
+h2 { margin-top: 2.5rem; color: var(--violet); }
+h3 { margin-top: 1.8rem; color: var(--teal); }
+a { color: var(--teal); }
+nav { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+nav a, .card {
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+}
+nav a { padding: .5rem .8rem; text-decoration: none; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+.card { display: block; padding: 1.2rem; text-decoration: none; color: var(--text); }
+.card:hover { border-color: var(--violet); transform: translateY(-1px); }
+.card strong { display: block; color: var(--violet); font-size: 1.15rem; }
+.card span { color: var(--muted); }
+.callout { border-left: 4px solid var(--teal); padding: 1rem 1.2rem; background: var(--panel); }
+.warning { border-left-color: var(--warning); }
+code { color: #8ff4e4; background: var(--panel-2); padding: .12rem .35rem; border-radius: .25rem; }
+pre { overflow-x: auto; padding: 1rem; background: #090b10; border: 1px solid var(--border); border-radius: .65rem; }
+pre code { padding: 0; background: none; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .65rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+th { color: var(--violet); }
+kbd { border: 1px solid var(--border); border-bottom-width: 3px; border-radius: .3rem; padding: .1rem .35rem; }
+footer { padding: 2rem 0 4rem; border-top: 1px solid var(--border); }

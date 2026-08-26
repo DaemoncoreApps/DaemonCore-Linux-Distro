@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=DaemonCore Security Guidebook
+Comment=Read offline guides for authorized security testing
+Exec=exo-open /usr/share/doc/daemoncore/guidebook/index.html
+Icon=help-browser
+Terminal=false
+Categories=Education;System;

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DaemonCore Security Guidebook</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>DaemonCore Security Guidebook</h1>
+  <p>Practical, offline guidance for defensive security and authorized testing.</p>
+</header>
+<main>
+  <div class="callout warning">
+    <strong>Permission is the first technical requirement.</strong> Use these
+    tools only on systems and networks you own or are explicitly authorized to
+    assess. Record the owner, scope, dates, allowed techniques, and stop contact
+    before beginning.
+  </div>
+
+  <h2>Start here</h2>
+  <div class="grid">
+    <a class="card" href="lab-setup.html"><strong>Build a safe lab</strong><span>Isolate targets, establish scope, and organize evidence.</span></a>
+    <a class="card" href="network-analysis.html"><strong>Network discovery</strong><span>Map an authorized lab and understand packet captures.</span></a>
+    <a class="card" href="web-testing.html"><strong>Web testing</strong><span>Assess a localhost or deliberately vulnerable web lab.</span></a>
+    <a class="card" href="password-auditing.html"><strong>Password auditing</strong><span>Measure password strength using hashes you created.</span></a>
+    <a class="card" href="wireless-security.html"><strong>Wireless security</strong><span>Inspect your own adapter and evaluate Wi-Fi safely.</span></a>
+    <a class="card" href="incident-response.html"><strong>Incident response</strong><span>Triage a Linux host while preserving useful evidence.</span></a>
+  </div>
+
+  <h2>A repeatable workflow</h2>
+  <ol>
+    <li><strong>Define:</strong> write down scope, exclusions, time window, and stop conditions.</li>
+    <li><strong>Observe:</strong> collect low-impact facts before sending active probes.</li>
+    <li><strong>Validate:</strong> confirm findings with the least disruptive technique available.</li>
+    <li><strong>Record:</strong> preserve commands, timestamps, output, and relevant screenshots.</li>
+    <li><strong>Report:</strong> explain impact, evidence, and practical remediation.</li>
+    <li><strong>Restore:</strong> remove test accounts and data, then verify normal operation.</li>
+  </ol>
+
+  <div class="callout">
+    Commands in this guide use <code>127.0.0.1</code> or the documentation-only
+    <code>192.0.2.0/24</code> network. Replace them only with an address that is
+    inside your written scope.
+  </div>
+</main>
+<footer>DaemonCore Linux · Security education and authorized assessment</footer>
+</body>
+</html>
