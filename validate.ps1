@@ -15,7 +15,10 @@ $RequiredPaths = @(
     'config/includes.chroot/usr/share/themes/DaemonCore-Dark/gtk-3.0/gtk.css',
     'config/includes.chroot/usr/share/themes/DaemonCore-Black/gtk-3.0/gtk.css',
     'config/includes.chroot/usr/share/applications/daemoncore-guides.desktop',
-    'config/includes.chroot/usr/share/doc/daemoncore/guidebook/index.html'
+    'config/includes.chroot/usr/share/doc/daemoncore/guidebook/index.html',
+    'SCREENSHOTS.md',
+    'assets/screenshots/daemoncore-desktop-concept.png',
+    'assets/screenshots/daemoncore-applications-concept.png'
 )
 
 foreach ($RelativePath in $RequiredPaths) {
