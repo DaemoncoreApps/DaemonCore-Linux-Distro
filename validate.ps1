@@ -2,6 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 $ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RequiredPaths = @(
+    'AGENTS.md',
     'auto/config',
     'build.sh',
     'config/package-lists/desktop.list.chroot',
