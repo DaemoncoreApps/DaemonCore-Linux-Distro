@@ -2,11 +2,18 @@
 
 ![DaemonCore Linux banner](assets/daemoncore-banner.png)
 
-[View the DaemonCore desktop concept previews](SCREENSHOTS.md).
-
 DaemonCore Linux is a Debian-based XFCE live system for **authorized security
 testing, defensive validation, incident response, and security education**.
 The image is assembled from source with Debian's `live-build` tooling.
+
+## Desktop preview
+
+![DaemonCore desktop concept](assets/screenshots/daemoncore-desktop-concept.png)
+
+![DaemonCore applications menu concept](assets/screenshots/daemoncore-applications-concept.png)
+
+These are design previews using the real Core Horizon wallpaper, not screenshots
+from a boot-tested ISO. See [SCREENSHOTS.md](SCREENSHOTS.md) for details.
 
 ## First release profile
 
