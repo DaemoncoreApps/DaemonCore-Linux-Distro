@@ -30,7 +30,7 @@ from a boot-tested ISO. See [SCREENSHOTS.md](SCREENSHOTS.md) for details.
 See [APPLICATIONS.md](APPLICATIONS.md) for the complete categorized manifest
 of explicitly included software.
 
-DaemonCore also ships with three original wallpapers and two selectable dark
+DaemonCore also ships with five original wallpapers and two selectable dark
 GTK themes. See [THEMING.md](THEMING.md) for previews and customization details.
 
 An offline Security Guidebook is available from the desktop and Applications

@@ -24,6 +24,20 @@ A cinematic option for demonstrations and live-session screenshots.
 
 ![Neon Citadel](config/includes.chroot/usr/share/backgrounds/daemoncore/neon-citadel.png)
 
+### Core Signal
+
+A branded circuit-core design with a spacious layout and prominent
+DaemonCore Linux title.
+
+![Core Signal](config/includes.chroot/usr/share/backgrounds/daemoncore/core-signal.png)
+
+### Midnight Protocol
+
+A calm geometric horizon with a centered DaemonCore Linux title for everyday
+desktop use.
+
+![Midnight Protocol](config/includes.chroot/usr/share/backgrounds/daemoncore/midnight-protocol.png)
+
 Inside DaemonCore, select a wallpaper from **Desktop Settings → Background**.
 The files are installed in `/usr/share/backgrounds/daemoncore/`.
 
@@ -36,4 +50,3 @@ The files are installed in `/usr/share/backgrounds/daemoncore/`.
 
 Switch themes from **Settings → Appearance → Style**. Theme files are installed
 under `/usr/share/themes/` and inherit Debian's maintained Adwaita Dark base.
-

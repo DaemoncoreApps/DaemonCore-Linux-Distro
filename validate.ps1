@@ -2,7 +2,6 @@ $ErrorActionPreference = 'Stop'
 
 $ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RequiredPaths = @(
-    'AGENTS.md',
     'auto/config',
     'build.sh',
     'config/package-lists/desktop.list.chroot',
@@ -13,6 +12,8 @@ $RequiredPaths = @(
     'config/includes.chroot/usr/share/backgrounds/daemoncore/core-horizon.png',
     'config/includes.chroot/usr/share/backgrounds/daemoncore/silent-grid.png',
     'config/includes.chroot/usr/share/backgrounds/daemoncore/neon-citadel.png',
+    'config/includes.chroot/usr/share/backgrounds/daemoncore/core-signal.png',
+    'config/includes.chroot/usr/share/backgrounds/daemoncore/midnight-protocol.png',
     'config/includes.chroot/usr/share/themes/DaemonCore-Dark/gtk-3.0/gtk.css',
     'config/includes.chroot/usr/share/themes/DaemonCore-Black/gtk-3.0/gtk.css',
     'config/includes.chroot/usr/share/applications/daemoncore-guides.desktop',
