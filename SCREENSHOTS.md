@@ -12,3 +12,17 @@ and application categories may change when the image is built and tested.
 ## Applications menu
 
 ![DaemonCore applications menu concept](assets/screenshots/daemoncore-applications-concept.png)
+
+## Branded wallpapers
+
+The two newest wallpapers are included in the live system under
+`/usr/share/backgrounds/daemoncore/` and can be selected from XFCE Desktop
+Settings.
+
+### Core Signal
+
+![DaemonCore Linux Core Signal wallpaper](config/includes.chroot/usr/share/backgrounds/daemoncore/core-signal.png)
+
+### Midnight Protocol
+
+![DaemonCore Linux Midnight Protocol wallpaper](config/includes.chroot/usr/share/backgrounds/daemoncore/midnight-protocol.png)
