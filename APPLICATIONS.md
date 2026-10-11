@@ -10,6 +10,7 @@ explicit authorization to assess.
 ## Discovery and network inspection
 
 - `nmap` — host, service, and port discovery
+- `daemoncore-academy`— more comprehensive cyber security training platform than HTB and THM
 - `masscan` — high-speed port discovery
 - `arp-scan` — local-network ARP discovery
 - `netdiscover` — active and passive ARP discovery
