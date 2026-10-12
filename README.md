@@ -17,7 +17,7 @@ from a boot-tested ISO. See [SCREENSHOTS.md](SCREENSHOTS.md) for details.
 
 ## First release profile
 
-- Lightweight XFCE desktop
+- Lightweight XFCE desktop for performance
 - Live boot on 64-bit UEFI and legacy BIOS systems
 - Optional persistence when the USB is prepared with a persistence partition
 - Calamares graphical installer launcher
