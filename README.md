@@ -83,6 +83,9 @@ sha256sum -c dist/daemoncore-amd64.iso.sha256
 
 ## Customize
 
+See [WORKSTATION.md](WORKSTATION.md) for the Security menu, assessment workspace
+command, and build acceptance checklist.
+
 - Packages: `config/package-lists/daemoncore.list.chroot`
 - Desktop defaults: `config/includes.chroot/etc/skel/`
 - System identity: `config/includes.chroot/etc/`

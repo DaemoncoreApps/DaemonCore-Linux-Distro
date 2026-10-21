@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+chmod 0755 /usr/local/bin/daemoncore-assessment
+python3 /usr/local/share/daemoncore/build-security-menu.py

@@ -1,0 +1,47 @@
+#!/usr/bin/python3
+"""Create a private assessment workspace without replacing existing evidence."""
+import argparse
+import os
+from datetime import datetime, timezone
+from pathlib import Path
+import re
+import sys
+
+
+def main():
+    os.umask(0o077)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("name", nargs="?", help="assessment name")
+    parser.add_argument("--directory", type=Path, default=Path.home() / "Assessments")
+    args = parser.parse_args()
+    name = args.name or input("Assessment name: ").strip()
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,79}", name):
+        parser.error("Use 1–80 letters, digits, hyphens, or underscores, starting with a letter or digit.")
+    root = args.directory.expanduser() / name
+    try:
+        args.directory.expanduser().mkdir(mode=0o700, parents=True, exist_ok=True)
+        root.mkdir(mode=0o700)
+    except FileExistsError:
+        parser.error(f"Workspace already exists: {root}")
+    for folder in ("scope", "notes", "captures", "evidence", "findings", "reports"):
+        (root / folder).mkdir(mode=0o700)
+    documents = {
+        "scope/authorization.md": "# Assessment scope\n\nClient:\nOperator:\nApproving authority:\nWritten authorization reference:\nTesting window and timezone:\nAllowed targets and ports:\nExcluded systems and activities:\nEmergency contact and stop conditions:\nData retention and cleanup:\n",
+        "notes/timeline.md": "# Activity timeline\n\n| UTC time | Action | Target | Evidence reference |\n| --- | --- | --- | --- |\n",
+        "findings/template.md": "# Finding title\n\nStatus: Draft\nSeverity:\nAffected asset:\n\n## Evidence\n\n## Reproduction\n\n## Impact\n\n## Remediation\n\n## Retest\n",
+        "reports/summary.md": "# Assessment report\n\n## Scope and limitations\n\n## Executive summary\n\n## Findings\n\n## Recommended actions\n\n## Cleanup and retest\n",
+        "README.md": f"# {name}\n\nCreated: {datetime.now(timezone.utc).isoformat()}\n\nComplete scope/authorization.md before testing. Keep original evidence in evidence/ and record actions in notes/timeline.md. Review sensitive data before sharing reports.\n",
+    }
+    for relative, content in documents.items():
+        with (root / relative).open("x", encoding="utf-8") as document:
+            document.write(content)
+        (root / relative).chmod(0o600)
+    print(f"Created assessment: {root}")
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except (OSError, EOFError, KeyboardInterrupt) as error:
+        print(f"Assessment creation stopped: {error}. Any partial workspace is retained.", file=sys.stderr)
+        sys.exit(1)

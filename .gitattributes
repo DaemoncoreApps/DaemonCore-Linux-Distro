@@ -1,0 +1,3 @@
+*.hook.chroot text eol=lf
+*.py text eol=lf
+config/includes.chroot/usr/local/bin/* text eol=lf

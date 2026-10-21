@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=New Assessment
+Comment=Create a private assessment workspace and report templates
+Exec=daemoncore-assessment
+Icon=folder-new
+Terminal=true
+Categories=DaemonCore-Reporting;
+Keywords=security;assessment;evidence;report;

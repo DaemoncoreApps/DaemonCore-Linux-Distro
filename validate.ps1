@@ -4,6 +4,10 @@ $ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RequiredPaths = @(
     'auto/config',
     'build.sh',
+    'config/hooks/live/0300-daemoncore-menu.hook.chroot',
+    'config/includes.chroot/usr/local/bin/daemoncore-assessment',
+    'config/includes.chroot/usr/local/share/daemoncore/build-security-menu.py',
+    'config/includes.chroot/usr/share/applications/daemoncore-assessment.desktop',
     'config/package-lists/desktop.list.chroot',
     'config/package-lists/daemoncore.list.chroot',
     'config/hooks/live/0100-daemoncore-identity.hook.chroot',
