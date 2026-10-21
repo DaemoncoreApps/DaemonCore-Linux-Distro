@@ -7,10 +7,26 @@ Debian Stable repositories configured by `auto/config`.
 Use security-testing software only on systems and networks you own or have
 explicit authorization to assess.
 
+## DaemonCore Academy
+
+[DaemonCore Academy 10.0.4](https://github.com/DaemoncoreApps/DaemonCore-Downloads/releases/tag/v10.0.4)
+is the current public Linux release. It provides practical cybersecurity lessons,
+isolated training ranges, evidence-based exercises, and the FieldOps workspace.
+This release adds a 12-track CORE 02 Learning Command Center with prerequisites,
+lesson progress, and capstone standards for each specialist track.
+
+- [Debian package for x64 Linux](https://github.com/DaemoncoreApps/DaemonCore-Downloads/releases/download/v10.0.4/DaemonCore-Academy-10.0.4.deb)
+- [Portable x64 AppImage](https://github.com/DaemoncoreApps/DaemonCore-Downloads/releases/download/v10.0.4/DaemonCore-Academy-10.0.4.AppImage)
+- [SHA-256 checksums](https://github.com/DaemoncoreApps/DaemonCore-Downloads/releases/download/v10.0.4/SHA256SUMS-linux.txt)
+- [Linux installation and support guide](https://github.com/DaemoncoreApps/DaemonCore-Downloads/releases/download/v10.0.4/LINUX.md)
+
+Verify the downloaded package against the published checksums before installing.
+Academy is distributed separately from the 96 Debian packages below; the current
+ISO build does not bundle or install it automatically.
+
 ## Discovery and network inspection
 
 - `nmap` — host, service, and port discovery
-- `daemoncore-academy`— more comprehensive cyber security training platform than HTB and THM
 - `masscan` — high-speed port discovery
 - `arp-scan` — local-network ARP discovery
 - `netdiscover` — active and passive ARP discovery
