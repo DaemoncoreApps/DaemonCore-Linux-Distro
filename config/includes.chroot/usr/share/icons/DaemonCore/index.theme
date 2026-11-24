@@ -1,0 +1,12 @@
+[Icon Theme]
+Name=DaemonCore
+Comment=DaemonCore branding with the Adwaita application icon collection
+Inherits=Adwaita,hicolor
+Directories=scalable/apps
+
+[scalable/apps]
+Size=64
+Type=Scalable
+MinSize=16
+MaxSize=256
+Context=Applications

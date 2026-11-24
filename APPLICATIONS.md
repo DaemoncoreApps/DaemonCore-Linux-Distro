@@ -1,6 +1,6 @@
 # Included applications
 
-DaemonCore Linux explicitly selects the following 96 Debian packages. Debian
+DaemonCore Linux explicitly selects the following 97 Debian packages. Debian
 also installs their required dependencies. Package availability is tied to the
 Debian Stable repositories configured by `auto/config`.
 
@@ -21,7 +21,7 @@ lesson progress, and capstone standards for each specialist track.
 - [Linux installation and support guide](https://github.com/DaemoncoreApps/DaemonCore-Downloads/releases/download/v10.0.4/LINUX.md)
 
 Verify the downloaded package against the published checksums before installing.
-Academy is distributed separately from the 96 Debian packages below; the current
+Academy is distributed separately from the 97 Debian packages below; the current
 ISO build does not bundle or install it automatically.
 
 ## Discovery and network inspection
@@ -129,6 +129,7 @@ injection support depend on its chipset and driver.
 - `firefox-esr` — web browser
 - `mousepad` — graphical text editor
 - `qterminal` — terminal emulator
+- `python3-tk` — graphical runtime for the DaemonCore welcome window
 
 ## System, live boot, and everyday utilities
 

@@ -3,6 +3,17 @@
 DaemonCore Linux includes a coordinated violet-and-teal visual identity for
 the XFCE desktop and LightDM login screen.
 
+New accounts receive a top panel with the DaemonCore menu, welcome launcher,
+window list, notification tray, volume, clock, and session controls. The welcome
+window links to assessments, offline guides, official Academy releases, and
+appearance settings. Disable its login startup using the checkbox; reopen it
+from Applications at any time.
+
+The DaemonCore icon theme inherits Adwaita and adds a branded application mark.
+QTerminal uses a graphite background with violet, teal, and readable ANSI colors.
+LightDM uses Core Horizon and the same dark theme with the DaemonCore user mark.
+These defaults apply to new accounts; existing profiles retain their settings.
+
 ## Wallpapers
 
 ### Core Horizon

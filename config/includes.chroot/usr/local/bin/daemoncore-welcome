@@ -1,0 +1,72 @@
+#!/usr/bin/python3
+"""DaemonCore desktop starting point."""
+import os
+from pathlib import Path
+import subprocess
+import sys
+import tkinter as tk
+from tkinter import messagebox
+
+BG, PANEL, TEXT, ACCENT = "#11121b", "#202231", "#efedf8", "#63dfd4"
+
+
+def main():
+    config = Path(os.environ.get("XDG_CONFIG_HOME", Path.home() / ".config")) / "daemoncore"
+    disabled = config / "welcome-disabled"
+    if "--autostart" in sys.argv and disabled.exists():
+        return
+    window = tk.Tk()
+    window.title("Welcome to DaemonCore Linux")
+    window.configure(bg=BG)
+    window.geometry("700x660")
+    window.minsize(600, 640)
+
+    def launch(arguments):
+        try:
+            subprocess.Popen(arguments, start_new_session=True)
+        except OSError as error:
+            messagebox.showerror("Could not open application", str(error), parent=window)
+
+    tk.Label(window, text="DAEMONCORE LINUX", bg=BG, fg=ACCENT,
+             font=("Sans", 23, "bold")).pack(anchor="w", padx=32, pady=(28, 8))
+    tk.Label(window, text="Your security workstation", bg=BG, fg=TEXT,
+             font=("Sans", 14)).pack(anchor="w", padx=32)
+    tk.Label(window, text="Start an assessment, learn a technique, or set up your desktop.",
+             bg=BG, fg="#b6b4c8", font=("Sans", 11)).pack(anchor="w", padx=32, pady=(8, 20))
+    actions = [
+        ("Find a tool", "Search installed applications; browse Security in the panel menu",
+         ["xfce4-appfinder"]),
+        ("New assessment", "Create scope, evidence, findings, and report folders",
+         ["exo-open", "--launch", "TerminalEmulator", "daemoncore-assessment"]),
+        ("Security guidebook", "Read the included offline lab guides",
+         ["exo-open", "/usr/share/doc/daemoncore/guidebook/index.html"]),
+        ("DaemonCore Academy", "Open official releases and Linux installation instructions",
+         ["exo-open", "https://github.com/DaemoncoreApps/DaemonCore-Downloads/releases/latest"]),
+        ("Desktop appearance", "Choose your theme, icons, and fonts", ["xfce4-appearance-settings"]),
+        ("Wallpaper collection", "Choose from the DaemonCore backgrounds", ["xfdesktop-settings"]),
+    ]
+    for title, description, command in actions:
+        tk.Button(window, text=f"{title}\n{description}", command=lambda args=command: launch(args),
+                  anchor="w", justify="left", bg=PANEL, fg=TEXT, activebackground="#343047",
+                  activeforeground=ACCENT, relief="flat", padx=16, pady=8,
+                  font=("Sans", 11)).pack(fill="x", padx=32, pady=4)
+    enabled = tk.BooleanVar(value=not disabled.exists())
+
+    def save_preference():
+        try:
+            config.mkdir(parents=True, exist_ok=True)
+            if enabled.get():
+                disabled.unlink(missing_ok=True)
+            else:
+                disabled.touch()
+        except OSError as error:
+            messagebox.showerror("Could not save preference", str(error), parent=window)
+
+    tk.Checkbutton(window, text="Show welcome at login", variable=enabled, command=save_preference,
+                   bg=BG, fg=TEXT, selectcolor=PANEL, activebackground=BG,
+                   activeforeground=TEXT).pack(anchor="w", padx=32, pady=14)
+    window.mainloop()
+
+
+if __name__ == "__main__":
+    main()

@@ -4,6 +4,9 @@ $ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RequiredPaths = @(
     'auto/config',
     'build.sh',
+    'config/includes.chroot/usr/local/bin/daemoncore-welcome',
+    'config/includes.chroot/usr/share/applications/daemoncore-welcome.desktop',
+    'config/includes.chroot/etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml',
     'config/hooks/live/0300-daemoncore-menu.hook.chroot',
     'config/includes.chroot/usr/local/bin/daemoncore-assessment',
     'config/includes.chroot/usr/local/share/daemoncore/build-security-menu.py',

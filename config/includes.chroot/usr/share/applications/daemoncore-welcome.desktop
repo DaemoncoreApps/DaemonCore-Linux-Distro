@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Welcome to DaemonCore
+Comment=Open guides, Academy, assessments, and desktop settings
+Exec=daemoncore-welcome
+Icon=daemoncore
+Terminal=false
+Categories=Education;System;

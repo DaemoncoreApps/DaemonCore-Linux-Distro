@@ -2,4 +2,8 @@
 set -eu
 
 chmod 0755 /usr/local/bin/daemoncore-assessment
+chmod 0755 /usr/local/bin/daemoncore-welcome
+# Both Qt generations are used by supported Debian-family desktops.
+install -d /usr/share/qtermwidget6/color-schemes
+install -m 0644 /usr/share/qtermwidget5/color-schemes/DaemonCore.colorscheme /usr/share/qtermwidget6/color-schemes/DaemonCore.colorscheme
 python3 /usr/local/share/daemoncore/build-security-menu.py
